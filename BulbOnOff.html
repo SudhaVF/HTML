@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 30px;
+            width:500px;
+            border: 2px solid black;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <br><br>
+    <button>ON</button>
+
+    <script>
+        let toggle=true;
+        let div=document.querySelector("div");
+        let btn=document.querySelector("button");
+
+        btn.addEventListener("click",()=>{
+            if(toggle == true){
+                toggle=false;
+                btn.innerText="OFF";
+                div.style.boxShadow="0px 0px 10px rgba(0,0,0,0.5)";
+                div.style.backgroundColor="gold";
+                div.style.border="none";
+            }else{
+                toggle=true;
+                btn.innerText="ON";
+                div.style.boxShadow="none";
+                div.style.backgroundColor="white";
+                div.style.border="1px solid black";
+            }
+        })
+    </script>
+
+</body>
+</html>
