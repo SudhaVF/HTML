@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Signup Page</legend>
+        <label for="username">Username</label>
+        <input type="text" id="username" />
+        <br /><br />
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+        <br /><br />
+
+        <button>Signup</button>
+        <button>Cancel</button>
+        <br /><br />
+        <a href="./login.html">Already have an account?</a>
+      </fieldset>
+    </form>
+
+    <script>
+      let form = document.querySelector("form");
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+    
+        let username = document.querySelector("#username").value;
+        let password = document.querySelector("#password").value;
+
+        // Storing the data to localstorage
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
+
+        // navigation
+        window.location.assign("./login.html");
+      });
+    </script>
+  </body>
+</html>
+
+
