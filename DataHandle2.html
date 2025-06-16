@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Login Page</legend>
+        <label for="username">Username</label>
+        <input type="text" id="username" />
+        <br /><br />
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+        <br /><br />
+        <button>Login</button>
+        <button>Cancel</button><br /><br />
+        <a href="./signup.html">Create a new account?</a>
+      </fieldset>
+    </form>
+
+    <script>
+      let form = document.querySelector("form");
+
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        let username = document.querySelector("#username").value;
+        let password = document.querySelector("#password").value;
+
+        let usernamedb = localStorage.getItem("username");
+        let passworddb = localStorage.getItem("password");
+
+        if (username == usernamedb && password == passworddb) {
+          alert(usernamedb + " logged in successfully");
+          location.assign("./Home.html");
+        } else {
+          alert("Please check the username and password");
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+
