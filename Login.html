@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /*Global Resetting */
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+        }
+        .form-holder{
+            background-image: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg");
+            background-size: cover;
+            height: 100vh;
+          /*  border: 2px solid red; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: lightgrey;
+         /*   background-image: linear-gradient(); */
+        }
+        form{
+          /*  border: 2px solid red; */
+            background-color: white;
+            padding: 10px;
+            width: 25%;
+            border-radius:20px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+        }
+        .form-items{
+          /*  border:2px solid green; */
+          /*  padding: 10px 20px; */
+            margin:10px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+        label{
+            margin-bottom: 10px;
+        }
+        input{
+            padding: 10px 20px;
+            width: 100%;
+            outline:none;
+            border: 1px solid grey;
+            border-radius: 10px;
+        }
+        #btn-group{
+          /*  border: 2px solid green;
+            display: flex;
+            justify-content: space-evenly; */
+            width: 100%;
+        }
+        button{
+            padding: 10px 20px;
+            width: 100%;
+            margin: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-holder">
+        <form action="">
+            <h1 style="text-align:center; margin-bottom:15px; color:blue;">
+                Login Page
+            </h1>
+            <div class="form-items">
+                <label for="username">User Name</label>
+                <input type="text" id="username" placeholder="User Name">
+            </div>
+            <div class="form-items">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="email">
+            </div>
+            
+            <div class="form-items">
+                <div id="btn-group">
+                    <button>
+                        <a style="color:white;text-decoration: none;" href="./login.html">LOGIN</a>
+                    </button>
+                    <button>CANCEL</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
